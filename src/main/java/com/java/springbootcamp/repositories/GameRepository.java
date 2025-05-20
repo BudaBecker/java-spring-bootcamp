@@ -6,5 +6,5 @@ import com.java.springbootcamp.entities.Game;
 
 public interface GameRepository extends JpaRepository<Game, Long> {
     
-    
+  
 }
