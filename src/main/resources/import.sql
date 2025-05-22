@@ -1,3 +1,6 @@
+INSERT INTO game_list (name) VALUES ('Aventura e RPG');
+INSERT INTO game_list (name) VALUES ('Jogos de plataforma');
+
 INSERT INTO game (title, score, game_year, genre, platforms, img_url, short_description, long_description) VALUES ('Mass Effect Trilogy', 4.8, 2012, 'Role-playing (RPG), Shooter', 'XBox, Playstation, PC', 'https://raw.githubusercontent.com/devsuperior/java-spring-dslist/main/resources/1.png', 'Uma saga épica de ficção científica.', 'Explore a galáxia como o Comandante Shepard enfrentando ameaças alienígenas em uma trilogia consagrada por sua narrativa envolvente e escolhas impactantes.');
 INSERT INTO game (title, score, game_year, genre, platforms, img_url, short_description, long_description) VALUES ('Red Dead Redemption 2', 4.7, 2018, 'Role-playing (RPG), Adventure', 'XBox, Playstation, PC', 'https://raw.githubusercontent.com/devsuperior/java-spring-dslist/main/resources/2.png', 'O Velho Oeste em sua forma mais imersiva.', 'Vivencie a queda da era dos fora-da-lei com Arthur Morgan em um dos mundos abertos mais detalhados e emocionalmente intensos já criados.');
 INSERT INTO game (title, score, game_year, genre, platforms, img_url, short_description, long_description) VALUES ('The Witcher 3: Wild Hunt', 4.7, 2014, 'Role-playing (RPG), Adventure', 'XBox, Playstation, PC', 'https://raw.githubusercontent.com/devsuperior/java-spring-dslist/main/resources/3.png', 'Uma jornada lendária no Continente.', 'Assuma o papel de Geralt de Rívia, um caçador de monstros, em um mundo riquíssimo, com escolhas complexas, combate tático e narrativa profunda.');
@@ -8,3 +11,14 @@ INSERT INTO game (title, score, game_year, genre, platforms, img_url, short_desc
 INSERT INTO game (title, score, game_year, genre, platforms, img_url, short_description, long_description) VALUES ('Ori and the Blind Forest', 4, 2015, 'Platform', 'XBox, Playstation, PC', 'https://raw.githubusercontent.com/devsuperior/java-spring-dslist/main/resources/8.png', 'Visual encantador, história comovente.', 'Ori embarca em uma jornada de coragem e sacrifício em uma floresta mágica, combinando arte belíssima e jogabilidade precisa.');
 INSERT INTO game (title, score, game_year, genre, platforms, img_url, short_description, long_description) VALUES ('Cuphead', 4.6, 2017, 'Platform', 'XBox, Playstation, PC', 'https://raw.githubusercontent.com/devsuperior/java-spring-dslist/main/resources/9.png', 'Desenhos clássicos, dificuldade implacável.', 'Inspirado na animação dos anos 1930, Cuphead traz batalhas intensas, chefes criativos e trilha sonora jazzística vibrante.');
 INSERT INTO game (title, score, game_year, genre, platforms, img_url, short_description, long_description) VALUES ('Sonic CD', 4, 1993, 'Platform', 'Sega CD, PC', 'https://raw.githubusercontent.com/devsuperior/java-spring-dslist/main/resources/10.png', 'Sonic corre contra o tempo.', 'Sonic embarca em uma missão para salvar o futuro, utilizando viagens temporais e velocidade eletrizante em uma das aventuras mais únicas da série.');
+
+INSERT INTO belonging (list_id, game_id, position) VALUES (1, 1, 0);
+INSERT INTO belonging (list_id, game_id, position) VALUES (1, 2, 1);
+INSERT INTO belonging (list_id, game_id, position) VALUES (1, 3, 2);
+INSERT INTO belonging (list_id, game_id, position) VALUES (1, 4, 3);
+INSERT INTO belonging (list_id, game_id, position) VALUES (1, 5, 4);
+INSERT INTO belonging (list_id, game_id, position) VALUES (2, 6, 0);
+INSERT INTO belonging (list_id, game_id, position) VALUES (2, 7, 1);
+INSERT INTO belonging (list_id, game_id, position) VALUES (2, 8, 2);
+INSERT INTO belonging (list_id, game_id, position) VALUES (2, 9, 3);
+INSERT INTO belonging (list_id, game_id, position) VALUES (2, 10, 4);
