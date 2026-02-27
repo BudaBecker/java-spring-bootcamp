@@ -26,7 +26,7 @@ public class TodoController {
     @PutMapping("att/{id}")
     public TodoEntity atualizarStatus(@PathVariable("id") Integer id, @RequestBody TodoEntity todo) {
         todo.setId(id);
-        return service.salvarTodo(todo);
+        return service.attTodo(todo);
     }
 
     @GetMapping("{id}")

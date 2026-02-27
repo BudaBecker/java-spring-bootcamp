@@ -45,4 +45,10 @@ public class TodoEntity {
     public void setConcluido(Boolean concluido) {
         this.concluido = concluido;
     }
+
+    @Override
+    public String toString() {
+        return "[id=" + id + ", descricao=" + descricao + ", concluido=" + concluido + "]";
+    }
+
 }
