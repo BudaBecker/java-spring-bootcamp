@@ -1,4 +1,4 @@
-package com.spring.demo.entities.enums;
+package com.spring.demo.manufacture.enums;
 
 public enum TipoMotor {
     ASPIRADO,
