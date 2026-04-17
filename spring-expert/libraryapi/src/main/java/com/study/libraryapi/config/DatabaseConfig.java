@@ -5,7 +5,10 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
+// import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
 public class DatabaseConfig {
@@ -22,14 +25,31 @@ public class DatabaseConfig {
     @Value("${spring.datasource.driver-class-name}")
     String driver;
 
-    @Bean
-    public DataSource dataSource() {
-        DriverManagerDataSource ds = new DriverManagerDataSource();
-        ds.setUrl(url);
-        ds.setUsername(username);
-        ds.setPassword(password);
-        ds.setDriverClassName(driver);
-        return ds;
-    }
+    // @Bean
+    // public DataSource dataSource() {
+    // DriverManagerDataSource ds = new DriverManagerDataSource();
+    // ds.setUrl(url);
+    // ds.setUsername(username);
+    // ds.setPassword(password);
+    // ds.setDriverClassName(driver);
+    // return ds;
+    // }
 
+    @Bean
+    public DataSource hikariDataSource() {
+        HikariConfig config = new HikariConfig();
+        config.setJdbcUrl(url);
+        config.setUsername(username);
+        config.setPassword(password);
+        config.setDriverClassName(driver);
+
+        config.setMaximumPoolSize(10);
+        config.setMinimumIdle(1);
+        config.setPoolName("library-db-pool");
+        config.setMaxLifetime(600000); // 10min
+        config.setConnectionTimeout(60000); // 1min
+        config.setConnectionTestQuery("SELECT 1");
+
+        return new HikariDataSource(config);
+    }
 }
