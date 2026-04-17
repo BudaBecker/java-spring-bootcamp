@@ -1,0 +1,20 @@
+// rodar imagem do postgres na versao 18.3
+docker run --name librarydb -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -e POSTGRES_DB=library --network library-network postgres:18.3
+
+// ver os processos ATIVOS do docker (-a para ver todos os processos)
+docker ps
+
+// rodar pgadmin4 na versao 9.14.0
+docker run --name pgadmin4 -p 15432:80 -e PGADMIN_DEFAULT_EMAIL=admin@admin.com -e PGADMIN_DEFAULT_PASSWORD=admin --network library-network dpage/pgadmin4:9.14.0
+
+// remover container
+docker conteiner rm {{name}}
+
+// parar conteiner
+docker stop {{name}}
+
+// start conteiner
+docker start {{name}}
+
+// criar network
+docker network create {{name}}
