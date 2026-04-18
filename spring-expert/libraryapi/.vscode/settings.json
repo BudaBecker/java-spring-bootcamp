@@ -1,0 +1,5 @@
+{
+  "java.configuration.updateBuildConfiguration": "interactive",
+  "cSpell.words": ["Hikari"],
+  "java.compile.nullAnalysis.mode": "automatic"
+}
