@@ -1,4 +1,7 @@
 spring:
+  config:
+    import: file:.env[.properties]
+
   application:
     name: libraryapi
 
@@ -15,3 +18,8 @@ spring:
       max-lifetime: 600000
       keepalive-time: 120000
       leak-detection-threshold: 5000
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
