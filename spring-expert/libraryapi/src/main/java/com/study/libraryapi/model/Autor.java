@@ -7,11 +7,13 @@ import java.util.UUID;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name = "autor")
 @Getter
 @Setter
+@ToString
 public class Autor {
 
     @Id
